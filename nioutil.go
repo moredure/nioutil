@@ -25,6 +25,6 @@ func (mr *DoubleReader) Read(p []byte) (n int, err error) {
 
 func (d *DoubleReader) Reset(first, second io.Reader) {
 	*d = DoubleReader{
-		Readers: [2]io.Reader{first, second}
+		Readers: [2]io.Reader{first, second},
 	}
 }
